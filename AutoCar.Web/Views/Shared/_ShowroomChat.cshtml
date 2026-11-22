@@ -1,0 +1,10 @@
+@if (!Context.Request.Path.StartsWithSegments("/admin")) {
+<button id="chat-toggle" class="chat-launcher" aria-controls="showroom-chat" aria-expanded="false">✦ Trợ lý AI</button>
+<section id="showroom-chat" class="chat-panel" aria-label="Trợ lý AI AutoCar" hidden>
+    <header><div><strong>AutoCar Concierge</strong><small>Trợ lý AI · Tìm xe theo nhu cầu</small></div><button id="chat-close" type="button" aria-label="Đóng trò chuyện">×</button></header>
+    <div id="chat-messages" class="chat-messages" role="log" aria-live="polite"><p class="chat-bubble">Xin chào! Bạn đang tìm xe cho gia đình, đi làm hay du lịch? Hãy cho tôi biết ngân sách và số chỗ mong muốn.</p></div>
+    <div class="chat-suggestions"><button type="button">Tư vấn xe gia đình</button><button type="button">Cách đặt lịch lái thử?</button></div>
+    <form id="chat-form"><label class="visually-hidden" for="chat-input">Câu hỏi của bạn</label><input id="chat-input" maxlength="1500" placeholder="Hỏi về xe bạn quan tâm…" required autocomplete="off" /><button type="submit" aria-label="Gửi câu hỏi">↑</button></form>
+    <p class="chat-note">AI chạy trên máy chủ showroom · Không cần khóa API khi dùng chế độ miễn phí. Giá và thông số chỉ minh họa.</p>
+</section>
+}

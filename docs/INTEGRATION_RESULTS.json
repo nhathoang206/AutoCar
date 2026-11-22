@@ -1,0 +1,206 @@
+﻿[
+    {
+        "Test":  "POST /api/auth/login",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/auth/login",
+        "Expected":  401,
+        "Actual":  401,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/auth/register",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/brands",
+        "Expected":  403,
+        "Actual":  403,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/cars",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/cars/2147483647",
+        "Expected":  404,
+        "Actual":  404,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/brands",
+        "Expected":  400,
+        "Actual":  400,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/brands",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/brands/16",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "DELETE /api/brands/16",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/brands/16",
+        "Expected":  404,
+        "Actual":  404,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/car-models",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/cars",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/cars/79",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/cars/79",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/cars/79",
+        "Expected":  409,
+        "Actual":  409,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/orders",
+        "Expected":  409,
+        "Actual":  409,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/orders",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/orders",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/orders/1/status",
+        "Expected":  409,
+        "Actual":  409,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/orders/1/status",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/orders/2/status",
+        "Expected":  409,
+        "Actual":  409,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/cars/79",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/orders/1/status",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/cars/79",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/dashboard/overview",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/orders/2/status",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/orders/2/payments",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "PUT /api/orders/2/status",
+        "Expected":  204,
+        "Actual":  204,
+        "Passed":  true
+    },
+    {
+        "Test":  "GET /api/dashboard/overview",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/cars",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/orders",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "POST /api/orders",
+        "Expected":  201,
+        "Actual":  201,
+        "Passed":  true
+    },
+    {
+        "Test":  "Simultaneous confirmation stock1",
+        "Expected":  "204,409",
+        "Actual":  "204,500",
+        "Passed":  false
+    }
+]

@@ -1,0 +1,21 @@
+@model AutoCar.Shared.Contracts.CarDto
+@using AutoCar.Web.Services
+@inject CarPhotoCatalog Photos
+@{var image=Model.Images.FirstOrDefault();var src=Photos.Image(Model);}
+<article class="car-card">
+    <div class="car-image">
+        <a href="/xe/@Model.Id"><img src="@src" alt="@Model.DisplayName — ảnh minh họa" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/images/car-pending.svg'" /></a>
+        <span class="car-tag">@(Model.IsFeatured?"LỰA CHỌN NỔI BẬT":Model.BodyStyle)</span>
+        <button class="favorite-btn" data-favorite="@Model.Id" aria-label="Yêu thích @Model.DisplayName">♡</button>
+        @if(image==null||image.StartsWith("/catalog/")){<span class="image-disclosure">@(Photos.Find(Model.Brand,Model.Model)==null?"Đang cập nhật ảnh":"Ảnh tham khảo dòng xe")</span>}
+    </div>
+    <div class="car-content">
+        <div class="car-meta">@Model.Brand.ToUpperInvariant() <span>@Model.Year</span></div>
+        <h3><a href="/xe/@Model.Id">@Model.Brand @Model.Model</a></h3>
+        <p class="variant">@Model.Name</p>
+        <div class="car-specs"><span>@Model.Fuel</span><span>@Model.Transmission</span><span>@Model.Seats chỗ</span></div>
+        <div class="car-price">@Model.Price.ToString("N0") <small>VNĐ</small></div>
+        <div class="car-actions"><a href="/xe/@Model.Id">Khám phá xe <span>↗</span></a><button class="text-button" data-compare="@Model.Id">＋ So sánh</button></div>
+        <span class="stock @(Model.Stock==0?"out":"")">@(Model.Stock>0?"● Có xe tại showroom":"○ Liên hệ đặt trước")</span>
+    </div>
+</article>

@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.vs/
+.runtime/
+.packages/
+.tools/
+tmp/
+**/appsettings.Local.json
+**/wwwroot/uploads/
+*.user
+*.log

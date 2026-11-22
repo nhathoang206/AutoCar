@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "AutoCar API + Web",
+    "Projects": [
+      {
+        "Path": "AutoCar.Api\\AutoCar.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AutoCar.Web\\AutoCar.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

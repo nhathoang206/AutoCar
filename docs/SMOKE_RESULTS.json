@@ -1,0 +1,86 @@
+﻿[
+    {
+        "Name":  "API process health",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "Swagger document",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "Protected orders",
+        "Expected":  401,
+        "Actual":  401,
+        "Passed":  true
+    },
+    {
+        "Name":  "Protected dashboard",
+        "Expected":  401,
+        "Actual":  401,
+        "Passed":  true
+    },
+    {
+        "Name":  "Anonymous brand creation blocked",
+        "Expected":  401,
+        "Actual":  401,
+        "Passed":  true
+    },
+    {
+        "Name":  "Invalid registration rejected before database",
+        "Expected":  400,
+        "Actual":  400,
+        "Passed":  true
+    },
+    {
+        "Name":  "Unknown endpoint",
+        "Expected":  404,
+        "Actual":  404,
+        "Passed":  true
+    },
+    {
+        "Name":  "MVC login page",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "MVC register page",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "MVC about page",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "MVC compare page",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "MVC contact page",
+        "Expected":  200,
+        "Actual":  200,
+        "Passed":  true
+    },
+    {
+        "Name":  "MVC admin redirects anonymous",
+        "Expected":  302,
+        "Actual":  302,
+        "Passed":  true
+    },
+    {
+        "Name":  "CSRF rejects anonymous gateway mutation",
+        "Expected":  400,
+        "Actual":  400,
+        "Passed":  true
+    }
+]

@@ -1,0 +1,10 @@
+@model AutoCar.Shared.Contracts.BrandDto
+@using AutoCar.Web.Services
+@inject IWebHostEnvironment Environment
+@{var source=BrandLogoCatalog.Resolve(Model,Environment);}
+<span class="brand-logo-frame">
+    @if(source!=null){
+        <img class="brand-logo" src="@source" alt="Logo @Model.Name" loading="lazy" decoding="async" onerror="this.onerror=null;this.hidden=true;this.nextElementSibling.hidden=false;" />
+        <span class="brand-logo-unavailable" hidden>Logo đang cập nhật</span>
+    }else{<span class="brand-logo-unavailable">Logo đang cập nhật</span>}
+</span>

@@ -1,0 +1,28 @@
+@model AutoCar.Shared.Contracts.LoginInput
+@{ViewData["Title"]="Chào mừng trở lại";}
+<section class="auth-page">
+    <div class="auth-art">
+        <p class="eyebrow light">YOUR JOURNEY STARTS HERE</p>
+        <h2>Đam mê chuyển động.<br />Kết nối mỗi ngày.</h2>
+        <img src="/images/showroom-hero.webp" alt="Ô tô concept AutoCar — ảnh AI minh họa" />
+        <span>AUTOCAR · THE NEXT CHAPTER</span>
+    </div>
+    <div class="auth-form">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1>Chào mừng trở lại.</h1>
+        <p>Đăng nhập để tiếp tục hành trình của bạn.</p>
+        <form method="post" action="/dang-nhap">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="All" class="validation-errors" role="alert"></div>
+            <label asp-for="Email">Tên đăng nhập hoặc email
+                <input asp-for="Email" type="text" autocomplete="username" placeholder="admin hoặc email của bạn" />
+            </label>
+            <label asp-for="Password">Mật khẩu
+                <input asp-for="Password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" />
+            </label>
+            <button class="btn primary">Đăng nhập ↗</button>
+        </form>
+        <p>Chưa có tài khoản? <a href="/dang-ky">Đăng ký ngay</a></p>
+        <p class="fine-print">Quên mật khẩu? <a href="/lien-he">Liên hệ quản trị viên</a>. Hệ thống chưa cấu hình dịch vụ gửi email.</p>
+    </div>
+</section>

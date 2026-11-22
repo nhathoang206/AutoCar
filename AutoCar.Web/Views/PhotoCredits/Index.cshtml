@@ -1,0 +1,10 @@
+@model AutoCar.Web.Services.CarPhoto[]
+@{ViewData["Title"]="Nguồn ảnh các dòng xe";}
+<section class="container section">
+<div class="breadcrumb"><a href="/">Trang chủ</a> / Nguồn ảnh</div>
+<p class="eyebrow">AUTOCAR · PHOTO CREDITS</p><h1>Những góc nhìn chân thực.</h1>
+<p>Ảnh tham khảo của từng dòng xe, có thể khác năm, phiên bản và thị trường. Hai phiên bản minh họa cùng dòng sử dụng chung ảnh. Ảnh được thu nhỏ và chuyển WebP để tải nhanh, không chỉnh sửa nội dung; giữ giấy phép của tác giả. Giá và thông số vẫn là dữ liệu minh họa.</p>
+@if(Model.Length==0){<p class="panel">Đang cập nhật ảnh và thông tin nguồn.</p>}
+<div class="car-grid">@foreach(var photo in Model){<article class="panel"><img src="/images/cars/@photo.File" alt="@photo.Key" loading="lazy" style="width:100%;aspect-ratio:1.6;object-fit:contain"/><h2>@photo.Key</h2><p>Tác giả: @photo.Artist</p><a href="@photo.Source" target="_blank" rel="noopener noreferrer">Trang ảnh gốc ↗</a><p><a href="@photo.LicenseUrl" target="_blank" rel="noopener noreferrer">@photo.License</a></p></article>}</div>
+<p class="fine-print">Ảnh hero, ảnh concept và ảnh bài viết được ghi nhãn AI minh họa riêng trên website.</p>
+</section>

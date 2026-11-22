@@ -1,0 +1,30 @@
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery AntiForgery
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="@AntiForgery.GetAndStoreTokens(Context).RequestToken" />
+    <title>@ViewData["Title"] · AutoCar</title><meta name="description" content="@(ViewData["Description"] ?? "AutoCar – Khám phá showroom ô tô, so sánh xe và đặt lịch lái thử. Dự án minh họa.")" />
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/premium.css" asp-append-version="true" />
+<link rel="stylesheet" href="/css/showroom.css" asp-append-version="true" />
+</head>
+<body>
+<div class="reading-progress" aria-hidden="true"><span></span></div>
+<div class="announcement">AUTOCAR EXPERIENCE <span>Không chỉ một chiếc xe. Là một hành trình.</span><a href="/lien-he">Đặt lịch tư vấn ↗</a></div>
+<header class="site-header"><div class="container nav-wrap"><a class="logo" href="/">AutoCar<span>®</span></a><button class="mobile-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+<nav class="main-nav" aria-label="Điều hướng chính"><a href="/">Trang chủ</a><a href="/xe">Xe ô tô</a><a href="/hang-xe">Hãng xe</a><a href="/so-sanh">So sánh <span id="compare-count"></span></a><a href="/tin-tuc">Tin tức</a><a href="/gioi-thieu">Giới thiệu</a><a href="/lien-he">Liên hệ</a></nav>
+<div class="nav-account">@if(User.Identity?.IsAuthenticated==true){<a href="/tai-khoan" class="account-link">@User.Identity.Name</a>@if(User.IsInRole("Admin")||User.IsInRole("Sales")){<a href="/admin" class="btn small">Quản trị ↗</a>}<form action="/dang-xuat" method="post">@Html.AntiForgeryToken()<button class="text-button">Thoát</button></form>}else{<a href="/dang-nhap" class="account-link">Đăng nhập</a><a class="btn small primary" href="/dang-ky">Tham gia ↗</a>}</div></div></header>
+<main>@RenderBody()</main>
+<footer class="site-footer"><div class="container"><div class="footer-top"><div><a href="/" class="logo">AutoCar<span>®</span></a><h3>Dẫn lối đam mê.<br />Mở lối hành trình.</h3></div><div><h4>Khám phá</h4><a href="/xe">Bộ sưu tập xe</a><a href="/hang-xe">Thương hiệu</a><a href="/so-sanh">So sánh xe</a></div><div><h4>Đồng hành cùng bạn</h4><a href="/lien-he">Tư vấn & lái thử</a><a href="/gioi-thieu">Về AutoCar</a><a href="/tai-khoan">Tài khoản của tôi</a></div><div><h4>AutoCar Showroom</h4><p>TP. Hồ Chí Minh, Việt Nam<br />Thông tin showroom minh họa</p><a href="/lien-he">Gửi yêu cầu liên hệ ↗</a></div></div><div class="footer-bottom"><a href="/nguon-anh">Nguồn ảnh</a><span>© @DateTime.Now.Year AutoCar. Đồ án Lập trình Web nâng cao.</span><span>Giá, thông số & hình ảnh minh họa. Không phải báo giá thị trường.</span></div></div></footer>
+<div id="toast" class="toast-message" role="status" aria-live="polite"></div><div id="loading" class="loading-bar" hidden></div>
+<button class="back-to-top" aria-label="Về đầu trang" title="Về đầu trang">↑</button>
+<script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.17.2/dist/sweetalert2.all.min.js"></script><script src="/js/site.js" asp-append-version="true"></script>
+<script src="/js/experience.js" asp-append-version="true"></script>
+<partial name="_ShowroomChat" />
+<script src="/js/showroom.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts",required:false)
+</body></html>

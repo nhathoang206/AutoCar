@@ -1,0 +1,84 @@
+@model AutoCar.Web.ViewModels.HomeVm
+@{ViewData["Title"]="Chạm đam mê. Mở hành trình mới.";}
+@if(Model.Error!=null){<div class="container error-state" role="alert"><strong>Dữ liệu showroom chưa sẵn sàng</strong><p>@Model.Error</p><a class="btn" href="/">Thử kết nối lại ↻</a></div>}
+
+<section class="hero hero-premium">
+    <img src="/images/showroom-hero.webp" class="hero-photograph" alt="Xe concept trong không gian kiến trúc cao cấp — ảnh AI minh họa AutoCar" fetchpriority="high" width="1672" height="941" />
+    <div class="hero-atmosphere" aria-hidden="true"></div>
+    <div class="container hero-content">
+        <p class="eyebrow light"><span></span> A NEW PERSPECTIVE ON DRIVING</p>
+        <h1>Chạm đam mê.<br />Mở <em>hành trình mới.</em></h1>
+        <p>Thiết kế cuốn hút. Trải nghiệm khác biệt.<br />Tìm chiếc xe phản chiếu phong cách của riêng bạn.</p>
+        <div class="hero-links">
+            <a href="/xe" class="btn white magnetic-button">Khám phá bộ sưu tập <span>↗</span></a>
+            <a href="/lien-he" class="hero-secondary"><span class="play-circle">↗</span> Đặt lịch trải nghiệm</a>
+        </div>
+        <div class="hero-caption"><span class="live-dot"></span> AUTOCAR SIGNATURE COLLECTION <small>Ảnh concept tạo bằng AI</small></div>
+    </div>
+    <div class="hero-bottom"><span>PREMIUM AUTOMOTIVE · VIETNAM</span><a href="#collection">KHÁM PHÁ HÀNH TRÌNH <span class="scroll-indicator">↓</span></a></div>
+</section>
+
+<section class="container search-section" aria-label="Tìm chiếc xe phù hợp">
+    <form class="search-panel" action="/xe">
+        <div><label for="hero-search">Lựa chọn của bạn</label><input id="hero-search" name="Search" placeholder="Bạn đang tìm chiếc xe nào?" /></div>
+        <div><label for="hero-brand">Thương hiệu</label><select id="hero-brand" name="BrandId"><option value="">Tất cả thương hiệu</option>@foreach(var b in Model.Brands.Items){<option value="@b.Id">@b.Name</option>}</select></div>
+        <div><label for="hero-price">Ngân sách dự kiến</label><select id="hero-price" name="MaxPrice"><option value="">Tất cả mức giá</option><option value="1000000000">Dưới 1 tỷ VNĐ</option><option value="2000000000">Dưới 2 tỷ VNĐ</option><option value="4000000000">Dưới 4 tỷ VNĐ</option></select></div>
+        <button class="btn primary">Tìm xe phù hợp <span>↗</span></button>
+    </form>
+</section>
+
+<section class="container journey-intro">
+    <div><p class="eyebrow">CURATED FOR YOUR LIFESTYLE</p><h2>Không chỉ chọn một chiếc xe.<br /><span>Chọn cách bạn chuyển động.</span></h2></div>
+    <div class="intro-copy"><p>Từ hành trình đầu tiên đến những dấu mốc mới, AutoCar mang đến không gian khám phá, so sánh và trải nghiệm ô tô theo cách của bạn.</p><a class="arrow-link" href="/gioi-thieu">Câu chuyện AutoCar <span>↗</span></a></div>
+</section>
+
+<section class="container brands-section section">
+    <div class="section-top"><div><p class="eyebrow">THE BRANDS</p><h2>Những tên tuổi. <em>Một đam mê.</em></h2></div><a class="arrow-link" href="/hang-xe">Tất cả thương hiệu <span>↗</span></a></div>
+    <div class="brand-strip">@foreach(var b in Model.Brands.Items.Take(8)){<a class="brand-tile" href="/xe?BrandId=@b.Id"><partial name="_BrandLogo" model="b" /><strong>@b.Name</strong><span class="brand-arrow">↗</span></a>}</div>
+</section>
+
+<section class="section subtle" id="collection">
+    <div class="container">
+        <div class="section-top"><div><p class="eyebrow">THE SIGNATURE COLLECTION</p><h2>Nổi bật theo <em>cách riêng.</em></h2><p class="section-description">Những lựa chọn dành cho người yêu sự khác biệt.</p></div><a class="btn" href="/xe">Xem toàn bộ bộ sưu tập <span>↗</span></a></div>
+        <div class="car-grid">@foreach(var c in Model.Featured.Items.Take(3)){<partial name="_CarCard" model="c" />}</div>
+        @if(Model.Featured.Items.Count==0){<div class="empty-state">Bộ sưu tập đang được cập nhật.</div>}
+        <div class="collection-footnote"><span>Giá và thông số là dữ liệu minh họa phục vụ đồ án.</span><a href="/so-sanh">Đặt các lựa chọn cạnh nhau — So sánh xe ↗</a></div>
+    </div>
+</section>
+
+<section class="container section lifestyle-section">
+    <div class="section-top"><div><p class="eyebrow">FIND YOUR DRIVE</p><h2>Mỗi phong cách.<br /><em>Một thế giới riêng.</em></h2></div><p class="section-description">Nhịp sống đô thị hay những cung đường rộng mở?<br />Bắt đầu từ điều khiến bạn hứng khởi.</p></div>
+    <div class="segment-grid">
+        @foreach(var segment in new[]{("Sedan","01","Tinh tế giữa nhịp sống","showroom-sedan.webp"),("SUV","02","Vươn tới chân trời mới","showroom-suv.webp"),("Crossover","03","Tự do trong mọi lựa chọn","showroom-hero.webp")}){
+            <a class="segment-card" href="/xe?BodyStyle=@segment.Item1"><span class="segment-number">@segment.Item2 /</span><div><span>@segment.Item1</span><p>@segment.Item3</p></div><img src="/images/@segment.Item4" alt="Xe @segment.Item1 concept — ảnh AI minh họa" loading="lazy" /><strong>Khám phá @segment.Item1 <span>↗</span></strong></a>
+        }
+    </div>
+</section>
+
+<section class="experience experience-premium">
+    <div class="experience-orbit" aria-hidden="true"></div>
+    <div class="container experience-inner">
+        <div><p class="eyebrow light">MORE THAN A SHOWROOM</p><h2>Có những cảm xúc<br />chỉ hiểu khi <em>cầm lái.</em></h2><p>Khám phá chiếc xe vượt ra ngoài những thông số.<br />Đặt lịch trải nghiệm cùng đội ngũ tư vấn AutoCar.</p><a class="btn white magnetic-button" href="/xe">Chọn xe để lái thử <span>↗</span></a></div>
+        <div class="experience-number"><span data-count="@Model.Brands.Total">@Model.Brands.Total</span><p>thương hiệu. Vô vàn cảm hứng.</p><div class="experience-line"></div><div class="experience-mini"><strong data-count="@Model.Latest.Total">@Model.Latest.Total</strong><p>phiên bản trong bộ sưu tập<br /><small>Dữ liệu lấy trực tiếp từ showroom</small></p></div></div>
+    </div>
+</section>
+
+<section class="container section">
+    <div class="section-top"><div><p class="eyebrow">JUST ARRIVED</p><h2>Cảm hứng mới <em>vừa đến.</em></h2></div><a class="arrow-link" href="/xe?Sort=newest">Bộ sưu tập mới nhất <span>↗</span></a></div>
+    <div class="car-grid">@foreach(var c in Model.Latest.Items){<partial name="_CarCard" model="c" />}</div>
+</section>
+
+<section class="container section news-home">
+    <div class="section-top"><div><p class="eyebrow">AUTOCAR JOURNAL</p><h2>Chuyện xe. <em>Chuyện hành trình.</em></h2></div><a class="arrow-link" href="/tin-tuc">Khám phá góc kiến thức <span>↗</span></a></div>
+    <div class="journal-grid">@foreach(var article in new[]{("chon-xe","01","Chọn chiếc xe đầu tiên: bắt đầu từ nhu cầu của bạn","showroom-sedan.webp"),("lai-thu","02","Một buổi lái thử hiệu quả cần chuẩn bị gì?","showroom-hero.webp"),("tai-chinh","03","Lập kế hoạch tài chính cho hành trình mới","showroom-suv.webp")}){
+        <a href="/tin-tuc/@article.Item1" class="journal-card"><div class="journal-art"><img src="/images/@article.Item4" alt="Ảnh AI minh họa bài viết AutoCar" loading="lazy" /><span class="journal-index">@article.Item2</span></div><p class="eyebrow">CẨM NANG AUTOCAR <span>↗</span></p><h3>@article.Item3</h3></a>
+    }</div>
+</section>
+
+@if(Model.Promotions.Count>0){var promotion=Model.Promotions[0];<section class="container section promotion-section"><div class="promotion-banner"><div><p class="eyebrow">AUTOCAR PRIVILEGES</p><h2>@promotion.Title</h2><p>@promotion.Description</p></div><a class="btn primary" href="/lien-he">Khám phá ưu đãi <span>↗</span></a></div></section>}
+
+<section class="quote-section"><div class="container"><p class="eyebrow">THE AUTOCAR PHILOSOPHY</p><span class="quote-mark" aria-hidden="true">“</span><blockquote>Chiếc xe phù hợp bắt đầu từ việc<br /><em>hiểu điều bạn thực sự cần.</em></blockquote><p>Triết lý tư vấn AutoCar · Showroom đồ án minh họa</p></div></section>
+
+<section class="container section owner-stories"><div class="section-top"><div><p class="eyebrow">OWNER STORIES</p><h2>Góc nhìn từ <em>người đồng hành.</em></h2></div><a class="arrow-link" href="/xe">Tìm lựa chọn của bạn ↗</a></div>@if(Model.Reviews.Count==0){<div class="owner-empty"><span aria-hidden="true">✧</span><p>Hành trình của bạn có thể là câu chuyện tiếp theo.<br /><small>Đánh giá được chia sẻ bởi khách hàng đã hoàn tất mua xe qua hệ thống.</small></p></div>}else{<div class="journal-grid">@foreach(var review in Model.Reviews.Take(3)){<article class="panel"><p class="eyebrow">@review.Rating / 5 ★</p><p>@review.Comment</p><strong>@review.Author</strong><a class="text-button" href="/xe/@review.CarVariantId">Xem chiếc xe ↗</a></article>}</div>}</section>
+
+<section class="final-cta"><div class="container"><p class="eyebrow light">YOUR NEXT CHAPTER</p><h2>Sẵn sàng cho<br /><em>hành trình của bạn?</em></h2><a href="/xe" class="btn white magnetic-button">Bắt đầu khám phá <span>↗</span></a></div></section>

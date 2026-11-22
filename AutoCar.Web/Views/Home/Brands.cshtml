@@ -1,0 +1,16 @@
+@model AutoCar.Shared.Contracts.PageResult<AutoCar.Shared.Contracts.BrandDto>
+@{ViewData["Title"]="Thương hiệu ô tô";}
+<section class="container section">
+    <div class="breadcrumb"><a href="/">Trang chủ</a> / Thương hiệu</div>
+    <p class="eyebrow">A WORLD OF POSSIBILITIES</p>
+    <h1>Mỗi thương hiệu.<br /><em>Một bản sắc.</em></h1>
+    <div class="brand-grid">
+        @foreach(var brand in Model.Items){
+            <a class="brand-tile" href="/xe?BrandId=@brand.Id">
+                <partial name="_BrandLogo" model="brand" />
+                <h3>@brand.Name</h3>
+                <span>Khám phá bộ sưu tập ↗</span>
+            </a>
+        }
+    </div>
+</section>

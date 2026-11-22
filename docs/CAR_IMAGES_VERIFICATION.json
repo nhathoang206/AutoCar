@@ -1,0 +1,404 @@
+{
+  "checkedAtUtc": "2026-10-30T06:11:44.910083+00:00",
+  "models": 39,
+  "sqlBackedCarsWithMatchingPhoto": 78,
+  "detailPagesChecked": 78,
+  "totalImageBytes": 7828158,
+  "pages": [
+    "/",
+    "/xe",
+    "/nguon-anh"
+  ],
+  "images": [
+    {
+      "model": "Audi A4",
+      "file": "audi-a4.webp",
+      "bytes": 149538,
+      "dimensions": [
+        1280,
+        666
+      ],
+      "sha256": "84ea79c9f38fd9650ed2fa9860cad01449b18f4953087ca8c1a00db2f49be1a6"
+    },
+    {
+      "model": "Audi A6",
+      "file": "audi-a6.webp",
+      "bytes": 151558,
+      "dimensions": [
+        1280,
+        592
+      ],
+      "sha256": "7065945c228908119ad57faa5eb37c8be5455644ef941f44c4b47a60edb86ea0"
+    },
+    {
+      "model": "Audi Q5",
+      "file": "audi-q5.webp",
+      "bytes": 230840,
+      "dimensions": [
+        1280,
+        723
+      ],
+      "sha256": "60f72a9f12864344099d040145d741b01624f7cff21ce4d4ae829ec2f725b800"
+    },
+    {
+      "model": "Audi Q7",
+      "file": "audi-q7.webp",
+      "bytes": 156128,
+      "dimensions": [
+        1280,
+        662
+      ],
+      "sha256": "e85901c66712193b79d249c91751145151c68b044b1da679fb1e8dbb2d1da230"
+    },
+    {
+      "model": "BMW 3 Series",
+      "file": "bmw-3-series.webp",
+      "bytes": 199110,
+      "dimensions": [
+        1280,
+        655
+      ],
+      "sha256": "0d2f23b780053de7b5cd8ebdaecfd86f59067cd57c514123726a6e78199f09f1"
+    },
+    {
+      "model": "BMW 5 Series",
+      "file": "bmw-5-series.webp",
+      "bytes": 182584,
+      "dimensions": [
+        1280,
+        655
+      ],
+      "sha256": "27596ccc843e7a6f10ed99033b44bcd46a7c000dc4b3605c5e050f14d0c56631"
+    },
+    {
+      "model": "BMW X5",
+      "file": "bmw-x5.webp",
+      "bytes": 213926,
+      "dimensions": [
+        1280,
+        796
+      ],
+      "sha256": "fbfe8ee76d47c15fcd4c73f5f7eafa9be96262c72725a94e46b7411d5804c252"
+    },
+    {
+      "model": "Ford Everest",
+      "file": "ford-everest.webp",
+      "bytes": 284142,
+      "dimensions": [
+        1280,
+        758
+      ],
+      "sha256": "72987c811bf676a8090f595827b08f64a187dc980048089ba53a6bf09af7c5a4"
+    },
+    {
+      "model": "Ford Ranger",
+      "file": "ford-ranger.webp",
+      "bytes": 280794,
+      "dimensions": [
+        1280,
+        722
+      ],
+      "sha256": "e245d265970b3aea21ba548615710a6164ef0af6e49e6bc83f716392aa75b42b"
+    },
+    {
+      "model": "Honda City",
+      "file": "honda-city.webp",
+      "bytes": 219162,
+      "dimensions": [
+        1280,
+        671
+      ],
+      "sha256": "b4fa58d6b182cd3e224a046b77f2f15f4f11bc4fad38547c7b03b9aa0318f065"
+    },
+    {
+      "model": "Honda Civic",
+      "file": "honda-civic.webp",
+      "bytes": 222196,
+      "dimensions": [
+        1280,
+        652
+      ],
+      "sha256": "ffc33e537ce9874ae19352550ebe60953b075bdcf9605b9be282d478fca472f9"
+    },
+    {
+      "model": "Honda CR-V",
+      "file": "honda-cr-v.webp",
+      "bytes": 182150,
+      "dimensions": [
+        1280,
+        704
+      ],
+      "sha256": "4a33be905b86081560f0664d22fc5b4c73454804bde019e8b51e885d2da9ec81"
+    },
+    {
+      "model": "Hyundai Accent",
+      "file": "hyundai-accent.webp",
+      "bytes": 177866,
+      "dimensions": [
+        1280,
+        638
+      ],
+      "sha256": "f43ac73bcdba5d56f385c4a6e6a62039acc0c0c271d0a8170d831d6f1110264e"
+    },
+    {
+      "model": "Hyundai Santa Fe",
+      "file": "hyundai-santa-fe.webp",
+      "bytes": 235760,
+      "dimensions": [
+        1280,
+        781
+      ],
+      "sha256": "5099e458aaad937c3fe07d8382e48a696ffe62dbca2a9ce28af5868b570bfac5"
+    },
+    {
+      "model": "Hyundai Tucson",
+      "file": "hyundai-tucson.webp",
+      "bytes": 134326,
+      "dimensions": [
+        1280,
+        687
+      ],
+      "sha256": "0590262efdc1406e6bb27724b319ee130e46e3813238b6ef05394b6d4aa79a85"
+    },
+    {
+      "model": "Kia K3",
+      "file": "kia-k3.webp",
+      "bytes": 152344,
+      "dimensions": [
+        1280,
+        676
+      ],
+      "sha256": "a45bc262e4d4321d12213a3d692b2eefc2c73a87fb4b7d48be9aa729748f81c2"
+    },
+    {
+      "model": "Kia Sorento",
+      "file": "kia-sorento.webp",
+      "bytes": 204056,
+      "dimensions": [
+        1280,
+        744
+      ],
+      "sha256": "a4312f2ece65947185b01a250b35a84459e7d472f74541a3e597b7c1df80f106"
+    },
+    {
+      "model": "Kia Sportage",
+      "file": "kia-sportage.webp",
+      "bytes": 225762,
+      "dimensions": [
+        1280,
+        671
+      ],
+      "sha256": "4edb9054ed8c7993d323992d1b91bc9800cdf125241fe624a37397bf88c275af"
+    },
+    {
+      "model": "Lexus ES",
+      "file": "lexus-es.webp",
+      "bytes": 133604,
+      "dimensions": [
+        1280,
+        589
+      ],
+      "sha256": "e56de683020ed4288bc35c05cf0d78a62d2e607717aff2f8fe4c90586a106296"
+    },
+    {
+      "model": "Lexus RX",
+      "file": "lexus-rx.webp",
+      "bytes": 195076,
+      "dimensions": [
+        1280,
+        675
+      ],
+      "sha256": "3e4a19c324280a7285b16cfe41b910508c4c1af572c0043ae940185d5497c9a2"
+    },
+    {
+      "model": "Mazda CX-5",
+      "file": "mazda-cx-5.webp",
+      "bytes": 220428,
+      "dimensions": [
+        1280,
+        825
+      ],
+      "sha256": "f8de07b2c0702f7b50d100f1e6777f14529b2ad89ac2b8a9b90385b8379aa894"
+    },
+    {
+      "model": "Mazda Mazda3",
+      "file": "mazda-mazda3.webp",
+      "bytes": 245018,
+      "dimensions": [
+        1280,
+        670
+      ],
+      "sha256": "20e7cb6ca7b9c76e8d81196620825698459d559726fbe060d8c8e71fa73e1778"
+    },
+    {
+      "model": "Mercedes-Benz C-Class",
+      "file": "mercedes-benz-c-class.webp",
+      "bytes": 165736,
+      "dimensions": [
+        1280,
+        624
+      ],
+      "sha256": "6d72be74850a70aded1342c460e6dd4dde0de36a6871cadf9ea557bfda64bcf4"
+    },
+    {
+      "model": "Mercedes-Benz E-Class",
+      "file": "mercedes-benz-e-class.webp",
+      "bytes": 222686,
+      "dimensions": [
+        1280,
+        608
+      ],
+      "sha256": "18f7e9d495a649f3173e7616c0afe1f13637e90aca56f18290e6661490405a14"
+    },
+    {
+      "model": "Mercedes-Benz GLC",
+      "file": "mercedes-benz-glc.webp",
+      "bytes": 192216,
+      "dimensions": [
+        1280,
+        697
+      ],
+      "sha256": "8a63d501d7cc8f613b84411cd89b22964c6ef9e789b0b961fbfd7e4c6d9b882d"
+    },
+    {
+      "model": "Mitsubishi Outlander",
+      "file": "mitsubishi-outlander.webp",
+      "bytes": 172136,
+      "dimensions": [
+        1280,
+        790
+      ],
+      "sha256": "a90bdc4c9207c8787731d4c0e4df3e7752bdbcdb1580a8593bf03f6cd0f0bc43"
+    },
+    {
+      "model": "Mitsubishi Xpander",
+      "file": "mitsubishi-xpander.webp",
+      "bytes": 215646,
+      "dimensions": [
+        1280,
+        761
+      ],
+      "sha256": "2c5eac6e54537481c498d795f9058bc63165556530cff0aba64ba74886fe86fc"
+    },
+    {
+      "model": "Porsche Cayenne",
+      "file": "porsche-cayenne.webp",
+      "bytes": 196974,
+      "dimensions": [
+        1280,
+        666
+      ],
+      "sha256": "f987d80e3d77daab9659c5b5a562adab03e541cac9afa943ed95f0c558a1bf91"
+    },
+    {
+      "model": "Porsche Macan",
+      "file": "porsche-macan.webp",
+      "bytes": 289774,
+      "dimensions": [
+        1280,
+        852
+      ],
+      "sha256": "8a1f45f394b5c028f16be65d31f9d7dd3a50e5d783e294bec40046ac0ff93a2a"
+    },
+    {
+      "model": "Toyota Camry",
+      "file": "toyota-camry.webp",
+      "bytes": 102854,
+      "dimensions": [
+        1280,
+        557
+      ],
+      "sha256": "f93459fce0405699e90f5ceca2330535b290f5e07bb31a871b25e773ad01e2c9"
+    },
+    {
+      "model": "Toyota Corolla Cross",
+      "file": "toyota-corolla-cross.webp",
+      "bytes": 251516,
+      "dimensions": [
+        1280,
+        800
+      ],
+      "sha256": "396c1839c06c010083676ffaa54e546f29a4c131c28b5193c27fedec54f6f06c"
+    },
+    {
+      "model": "Toyota Fortuner",
+      "file": "toyota-fortuner.webp",
+      "bytes": 171858,
+      "dimensions": [
+        1280,
+        755
+      ],
+      "sha256": "efd55239299d205b84ff50cdd376c4c1ffa8ad3c2b23ac2fe3311721ab74a180"
+    },
+    {
+      "model": "Toyota Vios",
+      "file": "toyota-vios.webp",
+      "bytes": 155254,
+      "dimensions": [
+        1280,
+        629
+      ],
+      "sha256": "84245aba064e5b027265b56acfaa35db3ecad85c4f5e6e78f8803ce5b9618f19"
+    },
+    {
+      "model": "VinFast VF 7",
+      "file": "vinfast-vf-7.webp",
+      "bytes": 74724,
+      "dimensions": [
+        1280,
+        821
+      ],
+      "sha256": "99ce8bd61ad1a3f0de4eb321833ec2cc45368a97b1858f1b16ac69a36dbe550c"
+    },
+    {
+      "model": "VinFast VF 8",
+      "file": "vinfast-vf-8.webp",
+      "bytes": 320148,
+      "dimensions": [
+        1280,
+        754
+      ],
+      "sha256": "ec7d79147ede654a955f6cf7b463f29b625fb2854d891c9f517608eb73ff5d6d"
+    },
+    {
+      "model": "Volkswagen Teramont",
+      "file": "volkswagen-teramont.webp",
+      "bytes": 267682,
+      "dimensions": [
+        1280,
+        787
+      ],
+      "sha256": "8314a0ad0f46f137c6be8eb8566ce7511983a09ff63779b4d4de5b404914552d"
+    },
+    {
+      "model": "Volkswagen Tiguan",
+      "file": "volkswagen-tiguan.webp",
+      "bytes": 231058,
+      "dimensions": [
+        1280,
+        760
+      ],
+      "sha256": "78d5a385830567322b5d1e83b563bbb512291844011d0eb439210157b0227191"
+    },
+    {
+      "model": "Volvo XC60",
+      "file": "volvo-xc60.webp",
+      "bytes": 176936,
+      "dimensions": [
+        1280,
+        735
+      ],
+      "sha256": "dce81631b62666a5316ccaf84ffc71fd8e061d9d7840b3133d2ddda08ffc13a8"
+    },
+    {
+      "model": "Volvo XC90",
+      "file": "volvo-xc90.webp",
+      "bytes": 224592,
+      "dimensions": [
+        1280,
+        706
+      ],
+      "sha256": "31f985ee68241bbec8f8a60cd434f717508251bf49e41c4fa060cf53c4f090b7"
+    }
+  ]
+}
